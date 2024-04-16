@@ -1,0 +1,55 @@
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  background-image: url('../images/food.jpeg'); /* Specify the path to your background image */
+  background-size: cover; /* Ensure the background image covers the entire viewport */
+  background-repeat: no-repeat;
+}
+
+header {
+  background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent black background */
+  color: #fff;
+  text-align: center;
+  padding: 20px 0;
+}
+
+.search-container {
+    text-align: center;
+    margin-bottom: 20px; /* Optional: Add some space below the search box */
+}
+
+.search-container input[type="text"]
+{
+  width: 300px; /* Set the width of the search box */
+  height: 40px; /* Set the height of the search box */
+  padding: 5px 10px; /* Add padding inside the search box */
+  font-size: 16px; /* Set the font size */
+}
+.search-container button {
+  width: 120px; /* Set the width of the search button */
+  height: 40px; /* Set the height of the search button */
+  font-size: 16px; /* Set the font size */
+}
+
+footer {
+  background-color: rgba(51, 51, 51, 0.7); /* Semi-transparent black background */
+  color: #fff;
+  text-align: center;
+  padding: 10px 0;
+  position: fixed;
+  width: 100%;
+  bottom: 0;
+}
+
+h1 {
+  margin: 0;
+}
+
+main {
+  padding: 20px;
+}
+
+div{
+  text-align: center;
+}
