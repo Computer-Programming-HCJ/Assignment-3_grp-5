@@ -1,13 +1,13 @@
 function searchRecipes() {
-  const takeUserInput = document.getElementById('searchInput').value;
-  const recipesApiKey = 'cb6b6a6ad915266a36bf867aa947cfec'; 
+  const searchInput = document.getElementById('searchInput').value;
+  const apiKey = 'cb6b6a6ad915266a36bf867aa947cfec'; 
   const appId = '4295fbb8'; 
-  const recipesApiUrl = `https://api.edamam.com/search?q=${takeUserInput}&app_id=${appId}&app_key=${recipesApiKey}`;
+  const apiUrl = `https://api.edamam.com/search?q=${searchInput}&app_id=${appId}&app_key=${apiKey}`;
 
-  fetch(recipesApiUrl)
+  fetch(apiUrl)
       .then(response => {
           if (!response.ok) {
-              throw new Error('Network isn't responding.');
+              throw new Error('Network response was not ok');
           }
           return response.json();
       })
@@ -25,5 +25,5 @@ function searchRecipes() {
               recipeResults.appendChild(recipeElement);
           });
       })
-      .catch(error => console.error('Error finding recipes=', error));
+      .catch(error => console.error('Error fetching recipes:', error));
 }
