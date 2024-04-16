@@ -7,7 +7,7 @@ function searchRecipes() {
   fetch(apiUrl)
       .then(response => {
           if (!response.ok) {
-              throw new Error('Network response was not ok');
+              throw new Error('No response');
           }
           return response.json();
       })
@@ -25,5 +25,5 @@ function searchRecipes() {
               recipeResults.appendChild(recipeElement);
           });
       })
-      .catch(error => console.error('Error fetching recipes:', error));
+      .catch(error => console.error('Error finding recipes:', error));
 }
