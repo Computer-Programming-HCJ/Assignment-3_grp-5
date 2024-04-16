@@ -5,11 +5,11 @@ function searchRecipes() {
   const recipesApiUrl = `https://api.edamam.com/search?q=${takeUserInput}&app_id=${appId}&app_key=${recipesApiKey}`;
 
   fetch(recipesApiUrl)
-      .then(i => {
-          if (!i.ok) {
+      .then(response => {
+          if (!response.ok) {
               throw new Error('Network isn't responding.');
           }
-          return i.json();
+          return response.json();
       })
       .then(data => {
           const recipes = data.hits;
